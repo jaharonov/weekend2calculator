@@ -26,7 +26,7 @@ $.ajax({
 
 .done(function(response) {
     console.log('successfully posted variables!');
-    getMath();
+    
 })
 .fail(function(msg, status) {
     console.log('error response:', status);
