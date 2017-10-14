@@ -12,15 +12,24 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.post('/doSomeMath', function(req, res){
    variables = (req.body);
     res.sendStatus(201);
-    console.log(variables.value1);
     function doMath() {
-     if (variables.value1 === 'divi') {
-    console.log('do division');
+        var answer= 0;
+     if (variables.value3 === 'divi') {
+    answer = (parseInt(variables.value1) / parseInt(variables.value2));
      }
-     else {
-             console.log('do not do division');
-         };
-     }
+      else if (variables.value3 === 'add') {
+        answer = (parseInt(variables.value1) + parseInt(variables.value2));
+         }
+     else if (variables.value3 === 'sub') {
+         answer = (parseInt(variables.value1) - parseInt(variables.value2));
+         }
+     else  {
+          answer = (parseInt(variables.value1) * parseInt(variables.value2));
+         }
+         console.log({answer});
+         
+        };
+        
      doMath();
 });
 
