@@ -3,7 +3,7 @@ body {
 }
 
 #calculatorHere {
-    height: 450px;
+    height: 500px;
     width: 400px;
     background-color: rgb(172, 230, 172);
     padding-top: 15px;
@@ -14,6 +14,7 @@ body {
 }
 h1 {
     font-size: 50px;
+    color: white;
 }
 
 #answerZone {
@@ -23,7 +24,8 @@ h1 {
     background-color: lightslategray;
     color: rgb(235, 98, 201);
     font-size: 30px;
-    text-align: center;
+    text-align: center; 
+    padding-top: 20px;
     
     float: center;
     
@@ -43,6 +45,13 @@ button {
     font-family: 'Orbitron', sans-serif;
     
 }
+button:focus {
+outline: none;
+}
 #buttonArea {
+    padding-top: 15px;
+}
+
+#numButtons {
     padding-top: 15px;
 }
