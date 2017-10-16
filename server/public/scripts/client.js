@@ -4,9 +4,9 @@ $(document).ready(readyNow);
 function readyNow() {
     console.log('ready!');
 $('.calcType').on('click', getMath);
-$('.numbers').on('click', numberInput);
+//$('.numbers').on('click', numberInput);
 $('#clear').on('click', clearFields);
-$('.calcType').on('click', opButton);
+//$('.calcType').on('click', opButton);
 }
 
 function getMath(){
@@ -54,19 +54,19 @@ function clearFields() {
     $('#fromButtons').text('');
 }
 
-function numberInput() {
-    var numbers = parseInt(this.id);
-   var newNumbers = $('#fromButtons').text() + numbers;
-   $('#fromButtons').text(newNumbers);
+// function numberInput() {
+//     var numbers = parseInt(this.id);
+//    var newNumbers = $('#fromButtons').text() + numbers;
+//    $('#fromButtons').text(newNumbers);
     
 
-}
+// }
 
-function opButton() {
+// function opButton() {
     
 
-   $('#fromOpButtons').text(this.id);
+//    $('#fromOpButtons').text(this.id);
 
 
-}
+// }
 
