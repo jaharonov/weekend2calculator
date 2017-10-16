@@ -1,6 +1,5 @@
 $(document).ready(readyNow);
 
-
 function readyNow() {
     console.log('ready!');
 $('.calcType').on('click', getMath);
@@ -26,28 +25,16 @@ $.ajax({
     data: {value1: x, value2: y, value3: operation}
 }).done(function(response) {
     console.log('successfully posted variables!');
+    appendAnswer(response);
     
 }).fail(function(msg, status) {
     console.log('error response:', status);
 });
-//GET request
- $.ajax({
-    method: 'GET',
-   url: '/doSomeMath' 
- }).done(function (response) {
-       console.log(response);
-       appendAnswer(response);
-  }) .fail(function (msg, status) {
-        console.log('error response:', status);
-   });
+    function appendAnswer(response) {
 
+        $('#answerZone').html(response.answer);
+    }
 }
-
-function appendAnswer(response) {
-
-    $('#answerZone').html( response.answer );
-}
-
 function clearFields() {
     $('.values').val('');
     $('#answerZone').text('');
